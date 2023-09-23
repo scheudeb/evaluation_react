@@ -1,4 +1,6 @@
 import React, { useReducer, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import './App.css';
 import DepenseForm from './component/DepenseForm';
 
@@ -6,13 +8,13 @@ const initialState = {
   depenses: [],
   total: 0,
   categorie: {
-    sport: 0,
-    alimentation: 0,
-    loisirs: 0,
-    logement: 0,
-    transport: 0,
-    santé: 0,
-    autres: 0,
+    Alimentation: 0,
+    Logement: 0,
+    Transport: 0,
+    Divertissement: 0,
+    Santé: 0,
+    Education: 0,
+    Autres: 0,
   },
 };
 
@@ -63,23 +65,26 @@ function App() {
 
   return (
     <>
+  <div className="l-depenses">
+    <h1>Mes dépenses <i class="fa-solid fa-sack-dollar"></i></h1>
       <DepenseForm dispatch={dispatch} />
-      <h1>Total général: {state.total}$</h1>
+      <h2>Total général: {state.total}€</h2>
       <h2>Total par catégorie:</h2>
       <ul>
         {Object.entries(state.categorie).map(([catName, catTotal]) => (
           <li key={catName}>
-            {catName}: {catTotal}$
+            {catName}: {catTotal}€
           </li>
         ))}
       </ul>
       {state.depenses.map((dep, index) => (
         <div key={index}>
-          <h1>{dep.categorie}</h1>
-          <h2>{dep.description}</h2>
-          <h3>{dep.prix}$</h3>
+          <h2>{dep.categorie}</h2>
+          <h3>{dep.description}</h3>
+          <h4>{dep.prix}€</h4>
         </div>
       ))}
+      </div>
     </>
   );
 }

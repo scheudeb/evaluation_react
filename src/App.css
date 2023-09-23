@@ -4,3 +4,57 @@
   padding: 2rem;
   text-align: center;
 }
+.l-depenses{
+
+  padding-top: 30px;
+  padding-bottom:  30px;  background-color : #f5f5f5;
+  border-radius: 10px solid;
+}
+h1{
+  padding-top: 1Opx;
+  padding-bottom: 10px;
+  background-color : #f5f5f5;
+  font-size: 45px;
+  color: #029361;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom : 70px;
+}
+
+form{
+  align-items : center;
+  display: flex;
+  flex-wrap : wrap;
+}
+.l-form_description{
+  width: 100%;
+ padding-bottom: 25px;
+}
+
+.l-form_category{
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+label {
+font-size: 35px;
+padding-right :15px;
+padding-left :15px;
+}
+
+input{
+  padding :15px;
+  border-radius: 10px;
+  background-color :#efefef;
+  margin-right :20px;
+  margin-left : 20px;
+}
+
+
+select{
+  font-size : 35px;
+  border-radius: 10px;
+}
+.l-form_button{
+  font-size : 35px;
+  width: 100%;
+}

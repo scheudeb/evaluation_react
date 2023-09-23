@@ -1,15 +1,15 @@
-
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from "react";
 function DepenseForm({dispatch}) {
   
   const categories = [
-    "Alimentation",
-    "Logement",
-    "Transport",
-    "Divertissement",
-    "Santé",
-    "Éducation",
-    "Autres",
+    "Alimentation 🛒",
+    "Logement 🏰",
+    "Transport 🚗",
+    "Divertissement 🎬",
+    "Santé 🏥",
+    "Éducation 👪",
+    "Autres 💸",
   ];
   const [selectedCategory, setSelectedCategory] = useState("Alimentation");
   const [description, setdescription] = useState("");
@@ -36,11 +36,11 @@ dispatch({
 setdescription("")
 setprix("")
 
-
 }
 
   return (
     <form  onSubmit={submitHandler}  >
+      <div className="l-form_description">
       <label htmlFor="">
         Description
         <input value={description} onChange={descriptionHandleChange } type="text" placeholder="description..." />
@@ -50,12 +50,17 @@ setprix("")
     Prix
         <input value={prix} onChange={(event)=> setprix(event.target.value) } type="number" placeholder="votre prix..." />
       </label>
+      </div>
+      <div className="l-form_category">
       <select name={'category'} value={selectedCategory} onChange={handleChange}>
             {
                 categories.map((category, index) => <option key={index} value={category}>{category}</option>)
             }
         </select>
-        <button type="submit" >Ajouter</button>
+        </div>
+        <div className="l-form_button">
+        <button type="submit" >Ajouter</button> 
+        </div>
     </form>
     )
 }
