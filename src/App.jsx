@@ -68,15 +68,17 @@ function App() {
   <div className="l-depenses">
     <h1>Mes dépenses <i class="fa-solid fa-sack-dollar"></i></h1>
       <DepenseForm dispatch={dispatch} />
-      <h2>Total général: {state.total}€</h2>
-      <h2>Total par catégorie:</h2>
-      <ul>
-        {Object.entries(state.categorie).map(([catName, catTotal]) => (
-          <li key={catName}>
-            {catName}: {catTotal}€
-          </li>
-        ))}
-      </ul>
+      <div className='c-depenses'>
+        <h2>Total général: {state.total}€</h2>
+        <ul>
+        <h2>Total par catégorie:</h2>
+          {Object.entries(state.categorie).map(([catName, catTotal]) => (
+            <li key={catName}>
+              {catName}: {catTotal}€
+            </li>
+          ))}
+        </ul>
+     
       {state.depenses.map((dep, index) => (
         <div key={index}>
           <h2>{dep.categorie}</h2>
@@ -84,6 +86,7 @@ function App() {
           <h4>{dep.prix}€</h4>
         </div>
       ))}
+      </div>
       </div>
     </>
   );

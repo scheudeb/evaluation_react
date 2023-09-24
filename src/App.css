@@ -5,18 +5,48 @@
   text-align: center;
 }
 .l-depenses{
+  position: relative;
+  margin: 20px auto;
+  padding: 33px 25px 29px;
+  background: white;
+  border-bottom: 1px solid #c4c4c4;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+.l-depenses:before, .l-depenses:after{
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: inherit;
+  border-bottom: 1px solid #d2d2d2;
+  border-radius: 4px;
+}
 
-  padding-top: 30px;
-  padding-bottom:  30px;  background-color : #f5f5f5;
-  border-radius: 10px solid;
+h1:before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: #c4e17f;
+    border-radius: 5px 5px 0 0;
+    background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
 h1{
-  padding-top: 1Opx;
+  position: relative;
   padding-bottom: 10px;
   background-color : #f5f5f5;
   font-size: 45px;
-  color: #029361;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #C4E17F;
+  font-family: Arial, Helvetica, sans-serif;
   margin-bottom : 70px;
 }
 
@@ -28,11 +58,13 @@ form{
 .l-form_description{
   width: 100%;
  padding-bottom: 25px;
+ 
 }
 
 .l-form_category{
   width: 100%;
   padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 label {
@@ -40,21 +72,81 @@ font-size: 35px;
 padding-right :15px;
 padding-left :15px;
 }
+label:nth-child(1){
+  color: #f0786c;
+}
+label:nth-child(2){
+  color: #C39CDD;
+}
 
-input{
-  padding :15px;
-  border-radius: 10px;
-  background-color :#efefef;
-  margin-right :20px;
-  margin-left : 20px;
+input {
+  font-family: inherit;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: transparent ;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 33%;
+  height: 50px;
+  margin-bottom: 25px;
+  padding: 0 15px 2px;
+  font-size: 17px;
+  background: white;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 -2px #ebebeb;
+  box-shadow: inset 0 -2px #ebebeb;
 }
 
 
 select{
   font-size : 35px;
   border-radius: 10px;
+    padding: 12px;
+    background-color: white;
+    color: #669BE1;
 }
 .l-form_button{
-  font-size : 35px;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+ margin: auto;
+}
+button{
+  font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    height: 54px;
+    padding: 0;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background-color: #f0776c!important;
+    border: 0;
+    border-bottom: 2px solid #d76b60;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #d76b60;
+    box-shadow: inset 0 -2px #d76b60;
+  
+}
+
+.button:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.c-depenses{
+  color:  #8F8F8F;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ul{
+  list-style: none;
 }
